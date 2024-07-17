@@ -16,7 +16,7 @@
 
       build command: flutter build web --base-href=/webkit/web/
     -->
-    <base href="/">
+    <base href="/gslcontact/">
 
     <meta charset="UTF-8">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -32,22 +32,31 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png"/>
 
-    <title>webkit</title>
+    <title>G-Contacts</title>
     <link rel="manifest" href="manifest.json">
 
     <script>
         // The value below is injected by flutter build, do not touch.
-        const serviceWorkerVersion = "311252214";
+        const serviceWorkerVersion = "3666307550";
     </script>
     <!-- This script adds the flutter initialization JS code -->
     <script src="flutter.js" defer></script>
     <style>
+        #loader {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            text-align: center;
+        }
         .center {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin: 0 -50% 0 0;
-            transform: translate(-50%, -50%)
+            display: block;
+        }
+        .g-contact-text {
+            font-size: 60px;
+            color: #000;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -67,9 +76,12 @@
         });
     });
 </script>
-<div id="loader" class="container">
 
-    <img src="img/splash.png" class="center"/>
+
+<div id="loader" class="container">
+    <img src="img/users-alt.png" class="center"/>
+    <p class="g-contact-text">G-Contacts</p>
 </div>
+
 </body>
 </html>
